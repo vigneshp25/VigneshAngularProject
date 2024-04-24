@@ -1,7 +1,7 @@
 <div class="flex flex-col items-center">
     <p class="text-5xl">{{cartCount}}</p>
     <div class="flex my-5">
-        <app-buttoncomp [addition] = "addition"></app-buttoncomp>
-        <app-buttoncomp [subtraction] = "subtraction"></app-buttoncomp>
+        <app-buttoncomp [addition] = "addition" (click)="addCartCount()"></app-buttoncomp>
+        <app-buttoncomp [subtraction] = "subtraction" (click)="removeCartCount()"></app-buttoncomp>
     </div>
 </div>
