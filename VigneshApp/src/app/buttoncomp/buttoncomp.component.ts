@@ -10,4 +10,5 @@ import { Component, Input } from '@angular/core';
 export class ButtoncompComponent {
   @Input() addition?: string;
   @Input() subtraction?: string;
+  @Input() isAllowed?: boolean;
 }
