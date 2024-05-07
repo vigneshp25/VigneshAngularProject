@@ -1,0 +1,22 @@
+<div
+    class="min-w-6/12 min-h-3/6 border border-solid border-lime-600 rounded-3xl shadow-lime-400 shadow-sm flex flex-col justify-center px-4 py-10">
+    <div class="flex m-4 items-center">
+        <p class="font-bold px-4">Add Product:</p>
+        <input type="text" [(ngModel)]="productName" class="p-2 outline-none border border-lime-500 border-solid"
+            placeholder="Enter Product Name" (keyup.enter)="addProduct()">
+    </div>
+    <div class="flex">
+        <button
+            class="block w-full text-xl p-2 m-4 text-center border border-solid border-lime-500 shadow-sm hover:bg-lime-500 hover:text-white disabled:bg-lime-200 disabled:text-lime-400"
+            (click)="addProduct()">Create
+            Product</button>
+    </div>
+    <div class="flex flex-col max-h-72 overflow-auto">
+        <p [hidden]="productList.length % 2 == 0" class="text-center">List has odd number of products</p>
+        <ul>
+            <li *ngFor="let item of productList; index as index; even as e; odd as o" class="p-1 my-1 border border-solid border-lime-700"
+                [ngClass]=" index > 9 ? 'bg-blue-600': ''"
+                [ngStyle]=" index > 14 ? {'color': 'yellow'} : {} ">{{index+1}}. {{item}}</li>
+        </ul>
+    </div>
+</div>

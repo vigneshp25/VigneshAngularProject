@@ -3,9 +3,9 @@
     <div class="flex my-5">
         <button
             class="w-10 text-4xl pb-2 px-1 font-bold m-4 border border-solid border-red-500 rounded-xl shadow-sm shadow-red-500 hover:bg-red-500 hover:text-white disabled:bg-red-200 disabled:text-red-400"
-            [disabled]="cartCount >= 5" (click)="addCartCount()">{{addition}}</button>
+            [disabled]="cartCount >= 5" (click)="addCartCount()">+</button>
         <button
             class="w-10 text-4xl pb-2 px-1 font-bold m-4 border border-solid border-red-500 rounded-xl shadow-sm shadow-red-500 hover:bg-red-500 hover:text-white disabled:bg-red-200 disabled:text-red-400"
-            [disabled]="cartCount <=0" (click)="removeCartCount()">{{subtraction}}</button>
+            [disabled]="cartCount <=0" (click)="removeCartCount()">-</button>
     </div>
 </div>

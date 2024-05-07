@@ -8,8 +8,6 @@ import { Component } from "@angular/core";
 })
 export class CartCountComponent {
     cartCount: number = 0;
-    addition: string = "+";
-    subtraction: string = "-";
     addCartCount() {
         this.cartCount++;
     }
