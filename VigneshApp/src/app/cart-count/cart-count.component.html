@@ -2,10 +2,10 @@
     <p class="text-5xl">{{cartCount}}</p>
     <div class="flex my-5">
         <button
-            class="w-10 text-4xl pb-2 px-1 font-bold m-4 border border-solid border-red-500 rounded-xl shadow-sm shadow-red-500 hover:bg-red-500 hover:text-white disabled:bg-red-200 disabled:text-red-400"
-            [disabled]="cartCount >= 5" (click)="addCartCount()">+</button>
+            class="w-10 text-4xl pb-2 px-1 font-bold m-4 border border-solid border-red-500 rounded-xl shadow-sm shadow-red-500 hover:bg-red-500 hover:text-white"
+            [disabled]="cartCount >= 5" (click)="addCartCount()" [ngClass]="{'bg-red-200 text-red-400': cartCount >= 5}">+</button>
         <button
-            class="w-10 text-4xl pb-2 px-1 font-bold m-4 border border-solid border-red-500 rounded-xl shadow-sm shadow-red-500 hover:bg-red-500 hover:text-white disabled:bg-red-200 disabled:text-red-400"
-            [disabled]="cartCount <=0" (click)="removeCartCount()">-</button>
+            class="w-10 text-4xl pb-2 px-1 font-bold m-4 border border-solid border-red-500 rounded-xl shadow-sm shadow-red-500 hover:bg-red-500 hover:text-white"
+            [disabled]="cartCount <=0" (click)="removeCartCount()" [ngStyle]="{'background': cartCount <=0 ? 'rgb(254 202 202)': '', 'color': cartCount <=0 ? 'rgb(248 113 113)': ''}">-</button>
     </div>
 </div>
