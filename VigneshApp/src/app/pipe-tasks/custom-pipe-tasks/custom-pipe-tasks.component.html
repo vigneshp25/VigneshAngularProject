@@ -1,4 +1,20 @@
-<div class="w-[600px] min-h-3/6 border border-solid border-violet-400 flex flex-col justify-center px-4 py-10">
-    <h1 class="text-xxl">Custom Pipes</h1>
+<div class="w-[600px] min-h-3/6 border border-solid border-violet-400 flex flex-col justify-center px-4 py-10 text-white">
+    <h1 class="text-2xl mb-5">Custom Pipes</h1>
+    <select name="custPipe" id="custPipe" class="p-2 mb-5 bg-rose-400 outline-none" [(ngModel)]="SelectionOfCustomPipes">
+        <option value="" disabled>Select</option>
+        <option value="Ordinal">Ordinal</option>
+        <option value="TitleOnly">Title Only</option>
+        <option value="CleanWord">Clean Word</option>
+        <option value="CamelCase">Camel Case</option>
+        <option value="Reverse">Reverse</option>
+    </select>
+    <input type="text" class="border border-violet-400 p-2 outline-none text-cyan-950" placeholder="Enter the Value" [(ngModel)]="inputForCustomPipes">
 
+    <div [ngSwitch]="SelectionOfCustomPipes">
+        <div *ngSwitchCase="'Ordinal'">
+            <h3 class="text-xl">Ordinal</h3>
+            <p>Given number is {{inputForCustomPipes}} </p>
+            <p>And the Ordinal number for {{inputForCustomPipes}} is {{inputForCustomPipes | custompipes}}</p>
+        </div>
+    </div>
 </div>
