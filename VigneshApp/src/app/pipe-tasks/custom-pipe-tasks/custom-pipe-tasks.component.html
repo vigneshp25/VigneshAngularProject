@@ -4,6 +4,7 @@
         <option value="" disabled>Select</option>
         <option value="Ordinal">Ordinal</option>
         <option value="TitleOnly">Title Only</option>
+        <option value="Conjuction">Conjuction</option>
         <option value="CleanWord">Clean Word</option>
         <option value="CamelCase">Camel Case</option>
         <option value="Reverse">Reverse</option>
@@ -12,9 +13,25 @@
 
     <div [ngSwitch]="SelectionOfCustomPipes">
         <div *ngSwitchCase="'Ordinal'">
-            <h3 class="text-xl">Ordinal</h3>
-            <p>Given number is {{inputForCustomPipes}} </p>
-            <p>And the Ordinal number for {{inputForCustomPipes}} is {{inputForCustomPipes | custompipes}}</p>
+            <h3 class="text-xl my-5">Ordinal</h3>
+            <ng-container *ngIf="inputForCustomPipes !=''">                
+                <p class="my-1">Given number is {{inputForCustomPipes}} </p>
+                <p class="my-1">And the Ordinal number for {{inputForCustomPipes}} is {{inputForCustomPipes | custompipe1}}</p>
+            </ng-container>
+        </div>
+        <div *ngSwitchCase="'TitleOnly'">
+            <h3 class="text-xl my-5">Title Only</h3>
+            <ng-container *ngIf="inputForCustomPipes !=''">                
+                <p class="my-1">Given text is --- {{inputForCustomPipes}}</p>
+                <p class="my-1">And the Title only case of the text is --- {{inputForCustomPipes | custompipe2}}</p>
+            </ng-container>
+        </div>
+        <div *ngSwitchCase="'Conjuction'">
+            <h3 class="text-xl my-5">Conjuction</h3>
+            <ng-container *ngIf="inputForCustomPipes !=''">                
+                <p class="my-1">Given text is --- {{inputForCustomPipes}}</p>
+                <p class="my-1">And the answer is --- {{inputForCustomPipes | custompipe3}}</p>
+            </ng-container>
         </div>
     </div>
 </div>

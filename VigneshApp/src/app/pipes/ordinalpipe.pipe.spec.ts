@@ -1,4 +1,4 @@
-import { CustompipesPipe } from './custompipes.pipe';
+import { CustompipesPipe } from './ordinalpipe.pipe';
 
 describe('CustompipesPipe', () => {
   it('create an instance', () => {
