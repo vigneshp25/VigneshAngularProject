@@ -11,6 +11,15 @@ export class ConjunctionwordspipePipe implements PipeTransform {
     let arrayOfGivenWords = inputText.split(" ");
     let givenWordsCount = arrayOfGivenWords.length;
     let newlyFormedWords = "";
+    let capitalize = (inputWord:string):string =>{
+      let inputText = inputWord;
+      let totalLength = inputText.length;
+      let firstLetterOfInputText = inputText.slice(0,1);
+      let restOfTheLetters = inputText.slice(1,totalLength);
+      let capitalFirstLetter = firstLetterOfInputText.toUpperCase();
+      let smallRestOfLetters = restOfTheLetters.toLowerCase();
+      return capitalFirstLetter + smallRestOfLetters
+    }
     for (let i = 0; i < givenWordsCount; i++) {
       let setFlag = true;
       for (let j = 0; j < this.conjuctionWords.length; j++) {
@@ -23,10 +32,11 @@ export class ConjunctionwordspipePipe implements PipeTransform {
         newlyFormedWords += " " + arrayOfGivenWords[i];
         console.log(newlyFormedWords);
       } else{
-        newlyFormedWords += " " + arrayOfGivenWords[i].toLocaleUpperCase();
+        newlyFormedWords += " " + capitalize(arrayOfGivenWords[i]);
         console.log(newlyFormedWords);
       }
     }
     return newlyFormedWords;
   }
+  
 }
