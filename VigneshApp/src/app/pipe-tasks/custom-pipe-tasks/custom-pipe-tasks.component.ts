@@ -5,11 +5,13 @@ import { OrdinalPipe } from '../../pipes/ordinalpipe.pipe';
 import { TitleonlypipePipe } from '../../pipes/titleonlypipe.pipe';
 import { ConjunctionwordspipePipe } from '../../pipes/conjunctionwordspipe.pipe';
 import { CleanwordsPipe } from '../../pipes/cleanwords.pipe';
+import { CamelcasePipe } from '../../pipes/camelcase.pipe';
+import { ReversePipe } from '../../pipes/reverse.pipe';
 
 @Component({
   selector: 'app-custom-pipe-tasks',
   standalone: true,
-  imports: [CommonModule, FormsModule, OrdinalPipe, TitleonlypipePipe, ConjunctionwordspipePipe, CleanwordsPipe ],
+  imports: [CommonModule, FormsModule, OrdinalPipe, TitleonlypipePipe, ConjunctionwordspipePipe, CleanwordsPipe, CamelcasePipe, ReversePipe ],
   templateUrl: './custom-pipe-tasks.component.html',
   styleUrl: './custom-pipe-tasks.component.scss'
 })

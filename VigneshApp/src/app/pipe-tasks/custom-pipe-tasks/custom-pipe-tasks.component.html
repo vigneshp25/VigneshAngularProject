@@ -39,5 +39,17 @@
                 <p class="my-1">{{inputForCustomPipes | custompipe4}}</p>
             </ng-container>
         </div>
+        <div *ngSwitchCase="'CamelCase'">
+            <h3 class="text-xl my-5">Camel Case</h3>
+            <ng-container *ngIf="inputForCustomPipes !=''">                
+                <p class="my-1">{{inputForCustomPipes | custompipe5}}</p>
+            </ng-container>
+        </div>
+        <div *ngSwitchCase="'Reverse'">
+            <h3 class="text-xl my-5">Reverse</h3>
+            <ng-container *ngIf="inputForCustomPipes !=''">                
+                <p class="my-1">{{inputForCustomPipes | custompipe6}}</p>
+            </ng-container>
+        </div>
     </div>
 </div>
