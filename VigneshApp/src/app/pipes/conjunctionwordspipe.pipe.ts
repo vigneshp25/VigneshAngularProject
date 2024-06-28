@@ -30,10 +30,8 @@ export class ConjunctionwordspipePipe implements PipeTransform {
       }
       if (!setFlag){
         newlyFormedWords += " " + arrayOfGivenWords[i];
-        console.log(newlyFormedWords);
       } else{
         newlyFormedWords += " " + capitalize(arrayOfGivenWords[i]);
-        console.log(newlyFormedWords);
       }
     }
     return newlyFormedWords;

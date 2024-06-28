@@ -21,7 +21,6 @@ export class TasklistComponent {
     if(this.taskListSearchText.length > 0){
       this.toDoList.push({task: this.taskListSearchText, status: "ToDo"});
       this.taskListSearchText = "";
-      console.log(this.toDoList);
     }
   }
 }

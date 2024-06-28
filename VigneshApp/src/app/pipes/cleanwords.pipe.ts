@@ -36,10 +36,8 @@ export class CleanwordsPipe implements PipeTransform {
       }
       if (!setFlag){
         newlyFormedWords += " " + concealLetters(arrayOfGivenWords[i]);
-        console.log(newlyFormedWords);
       } else{
         newlyFormedWords += " " + arrayOfGivenWords[i];
-        console.log(newlyFormedWords);
       }
     }
     return newlyFormedWords;
