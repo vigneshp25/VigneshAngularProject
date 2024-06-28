@@ -11,7 +11,7 @@ export class ConjunctionwordspipePipe implements PipeTransform {
     let arrayOfGivenWords = inputText.split(" ");
     let givenWordsCount = arrayOfGivenWords.length;
     let newlyFormedWords = "";
-    let capitalize = (inputWord:string):string =>{
+    let capitalize = (inputWord:string):string => {
       let inputText = inputWord;
       let totalLength = inputText.length;
       let firstLetterOfInputText = inputText.slice(0,1);

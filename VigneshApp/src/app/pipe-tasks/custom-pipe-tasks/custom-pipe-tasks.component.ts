@@ -4,11 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { OrdinalPipe } from '../../pipes/ordinalpipe.pipe';
 import { TitleonlypipePipe } from '../../pipes/titleonlypipe.pipe';
 import { ConjunctionwordspipePipe } from '../../pipes/conjunctionwordspipe.pipe';
+import { CleanwordsPipe } from '../../pipes/cleanwords.pipe';
 
 @Component({
   selector: 'app-custom-pipe-tasks',
   standalone: true,
-  imports: [CommonModule, FormsModule, OrdinalPipe, TitleonlypipePipe, ConjunctionwordspipePipe ],
+  imports: [CommonModule, FormsModule, OrdinalPipe, TitleonlypipePipe, ConjunctionwordspipePipe, CleanwordsPipe ],
   templateUrl: './custom-pipe-tasks.component.html',
   styleUrl: './custom-pipe-tasks.component.scss'
 })
