@@ -5,13 +5,22 @@ import { ProductListPageComponent } from './product-list-page/product-list-page.
 import { CommonModule } from '@angular/common';
 import { TasklistComponent } from './tasklist/tasklist.component';
 import { CustomPipeTasksComponent } from './pipe-tasks/custom-pipe-tasks/custom-pipe-tasks.component'
+import { CardDetailsComponent } from './card-details/card-details.component';
 
 @Component({
-    selector: 'app-root',
-    standalone: true,
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.scss',
-    imports: [RouterOutlet, AddToCartComponent, ProductListPageComponent, CommonModule , TasklistComponent, CustomPipeTasksComponent ]
+  selector: 'app-root',
+  standalone: true,
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss',
+  imports: [
+            RouterOutlet,
+            AddToCartComponent,
+            ProductListPageComponent, 
+            CommonModule, 
+            TasklistComponent, 
+            CustomPipeTasksComponent, 
+            CardDetailsComponent
+          ]
 })
 export class AppComponent {
   title = 'VigneshApp';
