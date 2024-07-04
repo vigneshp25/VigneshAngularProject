@@ -19,7 +19,7 @@
                 <button class="bg-lime-600 hover:bg-lime-500 w-full p-2 my-3">Add Payment</button>
             </div>
         </div>
-        <div class="flex">
+        <div class="flex" *ngIf="cardNumber">
             <div class="w-96 h-56 m-auto bg-red-100 rounded-xl relative text-white shadow-2xl transition-transform transform hover:scale-110">
             
                 <img class="relative object-cover w-full h-full rounded-xl" src="https://i.imgur.com/kGkSg1v.png">
